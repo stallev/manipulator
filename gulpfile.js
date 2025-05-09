@@ -91,14 +91,6 @@ function toWebp() {
   });
 }
 
-function svgSprite() {
-  return gulp.src(paths.assets + 'svg/*.svg')
-    .pipe(svgmin({ plugins: [{ cleanupIDs: { minify: true } }] }))
-    .pipe(svgstore({ inlineSvg: true }))
-    .pipe(rename('sprite-svg.svg'))
-    .pipe(gulp.dest(paths.build + 'img/'));
-}
-
 function watch() {
   gulp.watch(paths.assets + 'scss/**/*.scss', styles);
   gulp.watch(paths.assets + 'js/**/*.js', scripts);
@@ -111,11 +103,11 @@ function serve() {
 }
 
 gulp.task('build', gulp.series(
-  gulp.parallel(styles, scripts, scriptsVendors, jsLibs, htmls, images, toWebp, svgSprite) // Assuming copyFonts is not needed based on the file structure.
+  gulp.parallel(styles, scripts, scriptsVendors, jsLibs, htmls, images, toWebp) // Assuming copyFonts is not needed based on the file structure.
 ));
 
 gulp.task('default', gulp.series(
-  gulp.parallel(styles, scripts, scriptsVendors, jsLibs, htmls, images, toWebp, svgSprite),
+  gulp.parallel(styles, scripts, scriptsVendors, jsLibs, htmls, images, toWebp),
   gulp.parallel(watch, serve) // Assuming no fonts task in watch
 ));
 
