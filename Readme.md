@@ -8,6 +8,7 @@ The project's directory structure is organized as follows:
 
 - `assets/`: Holds all asset files such as fonts, images, JavaScript, and SCSS.
 - `templates/`: Includes Nunjucks templates for HTML generation.
+  - `pages_components/`: Contains individual Nunjucks template files for each page component (e.g., services section, service card, client review card). Components should be imported into main templates from this directory.
 - `index.html`: The main HTML file.
 - `build/`: The output directory where production-ready files are generated.
 - `gulpfile.js`: Defines Gulp tasks for automating development workflows.
@@ -60,6 +61,22 @@ To optimize performance and user experience when working with images and icons, 
 - **Image Aspect Ratios**: Define aspect ratios using CSS (e.g., `aspect-ratio` or padding-bottom techniques) to prevent layout shifts during image loading.
 - **Progressive Loading**: For critical above-the-fold images, consider using low-quality image placeholders (LQIP) or blurred thumbnails that transition to full-quality images to enhance perceived performance.
 - **File Naming**: Use descriptive, lowercase file names with hyphens for images and SVGs (e.g., `hero-banner.jpg`, `icon-arrow.svg`) to maintain consistency.
+
+## Guidelines for Structuring Nunjucks Templates
+
+To ensure modular and reusable HTML, follow these guidelines for working with Nunjucks templates:
+
+- **Component-Based Templates**: Each page component (e.g., services section, service card, client review card) should be defined in a separate Nunjucks file within `src/templates/pages_components/`. For example:
+  - `src/templates/pages_components/services-section.njk`
+  - `src/templates/pages_components/service-card.njk`
+  - `src/templates/pages_components/review-card.njk`
+- **Importing Components**: Import components into main templates (e.g., `index.njk`) using Nunjucks `{% include %}` or `{% import %}` directives. For example:
+  ```nunjucks
+  {% include "pages_components/services-section.njk" %}
+  ```
+- **Reusable Components**: Design components to be reusable across multiple pages by passing dynamic data via Nunjucks variables or macros.
+- **File Naming**: Use descriptive, lowercase file names with hyphens (e.g., `service-card.njk`) to align with project conventions.
+- **Commenting**: Add comments to document the purpose of each component, e.g., `{# Services section with dynamic data #}`.
 
 ## 📦 Key NPM Packages
 
