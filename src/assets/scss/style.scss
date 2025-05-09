@@ -1,10 +1,22 @@
-@use 'components/header';
 @use 'utils/variables';
+@use 'utils/mixins';
+@use 'utils/placeholders';
+@use 'components/header';
 @use 'components/nav';
-@use 'utils/mixins'; // Imports mixins for reuse
-@use 'utils/placeholders'; // Imports placeholders for extend
+@use 'components/hero';
 @use 'components/footer';
 
 body {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.button {
+  @include button-style;
 }
