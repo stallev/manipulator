@@ -9,7 +9,7 @@
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background-color: blue;
+  background-color: $primary-color;
   color: white;
   font-size: 1rem;
   cursor: pointer;
@@ -17,6 +17,12 @@
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: darkblue;
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+@mixin responsive($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
   }
 }

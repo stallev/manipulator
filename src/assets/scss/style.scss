@@ -17,11 +17,6 @@ body {
   box-sizing: inherit;
 }
 
-// Removing the undefined mixin call since we don't have access to the mixins file
-// to verify the correct mixin name
 .button {
-  display: inline-block;
-  padding: 0.5em 1em;
-  border-radius: 4px;
-  text-decoration: none;
+  @include mixins.button-style;
 }
