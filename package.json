@@ -4,7 +4,8 @@
   "description": "Website for manipulator rental in Mogilev",
   "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "gulp": "gulp"
   },
   "keywords": [
     "manipulator",
@@ -16,7 +17,7 @@
   "author": "",
   "license": "ISC",
   "engines": {
-    "node": "22.x"
+    "node": "v20.18.1"
   },
   "browserslist": [
     "> 1%",
