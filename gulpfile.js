@@ -116,7 +116,6 @@ exports.scripts = scripts;
 exports.htmls = htmls;
 exports.images = images;
 exports.toWebp = toWebp;
-exports.svgSprite = svgSprite;
 exports.watch = watch;
 exports.serve = serve;
 exports.clean = clean;
