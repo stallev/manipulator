@@ -1,27 +1,12 @@
-🧱 Project Overview: land_starter
-The land_starter repository is a front-end starter template designed for rapid development of landing pages. It utilizes Gulp.js as its task runner to automate various development and production tasks.
-mono.software
+# land_starter - Front-end Starter Template
 
-📁 Project Structure
+The land_starter repository is a front-end starter template designed for rapid development of landing pages. It utilizes Gulp.js as its task runner to automate various development and production tasks. Use NodeJS 22x.
+
+## Project Structure
+
 The project's directory structure is organized as follows:
 
-css
-Copy
-Edit
-land_starter/
-├── src/
-│   ├── assets/
-│   │   ├── fonts/
-│   │   ├── img/
-│   │   ├── js/
-│   │   │   └── libs/
-│   │   └── scss/
-│   ├── templates/
-│   └── index.html
-├── build/
-├── gulpfile.js
-└── package.json
-src/: Contains the source files for the project.
+
 
 assets/: Holds all asset files such as fonts, images, JavaScript, and SCSS.
 
@@ -35,6 +20,14 @@ gulpfile.js: Defines Gulp tasks for automating development workflows.
 
 package.json: Lists project dependencies and scripts.
 GitHub
+
+## CSS Methodology and Structure
+
+This project follows the BEM (Block, Element, Modifier) methodology for naming HTML element classes. Styles for individual blocks are organized in separate SCSS files within the `src/assets/scss/components` directory.
+
+
+
+
 +1
 The JetBrains Blog
 +1

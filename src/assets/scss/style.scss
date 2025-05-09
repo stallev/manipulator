@@ -1,0 +1,10 @@
+@use 'components/header';
+@use 'utils/variables';
+@use 'components/nav';
+@use 'utils/mixins'; // Imports mixins for reuse
+@use 'utils/placeholders'; // Imports placeholders for extend
+@use 'components/footer';
+
+body {
+  font-family: sans-serif;
+}

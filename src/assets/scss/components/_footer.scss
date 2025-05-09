@@ -1,0 +1,9 @@
+@use '../utils/variables' as *;
+
+.footer {
+  padding: 20px; // Basic padding
+  background-color: #f0f0f0; // Light background
+  text-align: center;
+  font-size: 14px;
+  color: #555; // Text color
+}

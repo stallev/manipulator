@@ -1,0 +1,13 @@
+@use '../utils/variables' as *;
+.header {
+  padding: 1rem;
+  background-color: $background-color;
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &--dark {
+    background-color: $secondary-color;
+  }
+}
